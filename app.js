@@ -10,7 +10,7 @@
 
 let listaDeNumerosSorteados=[];
 let tentativas=1;
-let numeroLimiteSorteio=4;
+let numeroLimiteSorteio=10;
 let numeroAleatorio =gerarNumeroAleatorio();
 
 function exibirMensagemInicial(){
@@ -36,7 +36,7 @@ function verificarChute(){
 
     if (chute == numeroAleatorio){
         exibirTextoNaTela('h1', 'Parabéns, você acertou!');
-        let palavraTentativa=tentativas >1 ? 'tentativas' : 'tentativa';
+        let palavraTentativa=tentativas >1 ? 'Tentativas' : 'Tentativa';
         let mensagemTentativas=`voce descobriu o numero ' + numeroAleatorio ${tentativas} ${palavraTentativa}`;
         exibirTextoNaTela('p',mensagemTentativas);
         document.getElementById('reiniciar').removeAttribute('disabled');
